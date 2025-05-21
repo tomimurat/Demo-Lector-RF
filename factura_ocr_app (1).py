@@ -8,6 +8,7 @@ import os
 st.set_page_config(page_title="Lector de Facturas", layout="centered")
 st.title("📄 Lector Inteligente de Facturas")
 
+pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 uploaded_file = st.file_uploader("Subí una imagen de la factura", type=["jpg", "png", "jpeg", "pdf"])
 
 if uploaded_file:
